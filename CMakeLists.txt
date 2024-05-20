@@ -26,6 +26,16 @@ set(COMMON_HEADERS
 
 # Need logic for which backend here based on opts
 if (WIN32)
+
+    # Check if the compiler is MSVC
+    if(MSVC)
+      target_compile_options(target_name PRIVATE
+        /experimental:external
+        /external:W0
+        /external:anglebrackets
+      )
+    endif()
+
     set(PLATFORM_SOURCES
         pugl/src/win.c
         pugl/src/win_gl.c
