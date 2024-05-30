@@ -72,7 +72,7 @@ endif ()
 
 # This is temporary, until static/dynamic is implemented. Only builds static for now TODO 
 if(NOT DEFINED PUGL_STATIC)
-    #  set(PUGL_STATIC ON)
+    set(PUGL_STATIC ON)
     add_compile_definitions(PUGL_STATIC)
 endif()
 
