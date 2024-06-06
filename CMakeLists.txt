@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(puglCMake)
 
-include(Options.cmake)
+include(options.cmake)
 
 
 # Common sources 
